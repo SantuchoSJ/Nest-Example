@@ -1,0 +1,45 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "opts": {
+    "template": "node_modules/better-docs",
+    "encoding": "utf8",
+    "destination": "./doc/",
+    "recurse": true,
+    "verbose": true,
+    "readme": "./README.md",
+    "tutorials": "./src/tutorials"
+  },
+  "source": {
+    "include": ["src"],
+    "includePattern": "\\.(js|jsx|ts|tsx)$",
+    "excludePattern": "(node_modules/|docs/)"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "node_modules/better-docs/category",
+    "node_modules/better-docs/component",
+    "node_modules/better-docs/typescript"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true
+    },
+    "better-docs": {
+      "name": "FENIX-MS Coins",
+      "favIcon": "https://intranet.santander.com.ar/wp-content/themes/santanderintranet/favicon.ico",
+      "logo": "",
+      "title": "Documentation for coins microservice in fenix app",
+      "hideGenerator": false,
+      "navigation": [
+        {
+          "label": "Inicio",
+          "href": "./index.html"
+        }
+      ]
+    }
+  }
+}

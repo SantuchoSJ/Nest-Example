@@ -1,0 +1,4 @@
+echo "// -----------------FORMATTING, LINTING & CHECKING BUILD----------------------- //"
+yarn format
+yarn lint
+yarn build

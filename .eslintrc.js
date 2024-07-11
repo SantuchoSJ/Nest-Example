@@ -1,0 +1,50 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+  },
+  extends: [
+    "airbnb-typescript/base",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: "module",
+    project: "./tsconfig.json",
+  },
+  plugins: ["@typescript-eslint", "prettier"],
+  root: true,
+  rules: {
+    // for imports
+    "import/order": "off",
+    "import/no-extraneous-dependencies": ["off", { devDependencies: true }],
+    "import/no-named-as-default": "off",
+    "import/no-unresolved": "off",
+    "import/no-cycle": "off",
+    "import/extensions": [
+      "off",
+      "ignorePackages",
+      { js: "never", ts: "never", tsx: "never", json: "never" },
+    ],
+    "import/prefer-default-export": "off",
+    // for typescript
+    "@typescript-eslint/return-await": "error",
+    "@typescript-eslint/promise-function-async": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unnecessary-type-assertion": "error",
+    "@typescript-eslint/no-empty-interface": "error",
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-for-in-array": "warn",
+    "@typescript-eslint/no-import-type-side-effects": "error",
+    "@typescript-eslint/no-misused-promises": "error",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/interface-name-prefix": "off",
+  },
+};
